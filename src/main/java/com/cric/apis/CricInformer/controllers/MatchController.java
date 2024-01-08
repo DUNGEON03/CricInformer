@@ -33,5 +33,11 @@ public class MatchController {
 		return new ResponseEntity<>(this.matchService.getAllMatches(),HttpStatus.OK);
 		
 	}
+	
+	@GetMapping("/pointTable")
+	public ResponseEntity<List<List<String>>> getPointTable(){
+		return new ResponseEntity<>(this.matchService.getPointTable(),HttpStatus.OK);
+		
+	}
 
 }
